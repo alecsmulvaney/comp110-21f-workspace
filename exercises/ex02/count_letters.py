@@ -12,4 +12,4 @@ while i < len(word):
     if word[i] == letter:
         count = count + 1
     i = i + 1
-print("Count: ", count)
+print("Count:", count)
