@@ -7,7 +7,7 @@ right: int = int(input("Right-hand side? "))
 print("Left-hand side:", left)
 print("Right-hand side:", right)
 expo: int = left ** right
-div: int = left / right
+div = int(left) / int(right)
 int_div: int = left // right
 remain: int = left % right
 print(left, "**", right, "is", expo)
