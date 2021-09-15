@@ -10,23 +10,13 @@ i = 0
 x = 1
 letter = word[i]
 a = word[x]
+var: bool = False
 
-
-while count > 0:
-    while a != last: 
+while i < len(word):
+    while x < len(word): 
         if letter == a:
-            t = str("True") 
+            var = True   
         x = x + 1
-    count = count - 1
     i = i + 1
-    x = i + 1
 
-    
-
-if t == "True":
-    print("True")
-else:
-    print("False")
-
-
-print(a)
+print("Found duplicate: " + str(var))
