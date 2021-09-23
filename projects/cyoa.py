@@ -16,6 +16,7 @@ air: str = "\U0001f4a8"
 
 def main() -> None:
     """The main function that is called."""
+    global player
     greet()
     next_step()
     while_loop() 
@@ -33,6 +34,7 @@ def greet() -> None:
 def next_step() -> None:
     """First options for the player."""
     global points
+    global player
     print(f"What would you like to do next {player}?")
     starting_options: str = input("input 1 to start quiz, 2 to learn about the creator, 3 to skip the first question, or 4 to quit ")
     if starting_options == str(4):
@@ -61,6 +63,7 @@ def next_step() -> None:
 
 def question_one() -> None:
     """First real question that affects end element."""
+    global player
     print(f"So {player} what type of bender do you think you'll be?")
     print("(your options are 1 for fire, 2 for water, 3 for air, and 4 for earth)")
     initial_pick: int = int(input())
@@ -83,6 +86,7 @@ def question_one() -> None:
 
 def wrong_choice(points: int) -> int:
     """If the player picked to skip first question."""
+    global player
     points = points - 1
     mistake: int = int(input("On a scale of 1-10, how much do you regret skipping the first question? "))
     if mistake <= 5:
@@ -186,7 +190,8 @@ def while_loop() -> None:
 
 
 def endgame() -> None:
-    """Final step in the game assuming they haven't quit."""      
+    """Final step in the game assuming they haven't quit."""  
+    global player    
     global points 
     global fire_points
     global water_points 
