@@ -51,7 +51,7 @@ if __name__ == "__main__":
                 question_one()
 
         def question_one() -> None:
-            """First real question that affects end element"""
+            """First real question that affects end element."""
             print(f"So {player} what type of bender do you think you'll be?")
             print("(your options are 1 for fire, 2 for water, 3 for air, and 4 for earth)")
             initial_pick: int = int(input())
