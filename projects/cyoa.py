@@ -1,4 +1,4 @@
-"""Choose your own adventure project."""
+"""My choose your own adventure project."""
 
 __author__ = "730392059"
 
@@ -15,12 +15,15 @@ air: str = "\U0001f4a8"
 
 if __name__ == "__main__":
     def main() -> None:
+        """The main function that is called."""
         def greet() -> None:
+            """The introduction function and first part."""
             print("Welcome to the What's your Bender Type Quiz?!")
             global player
             player = input("What is your name? ")
        
         def next_step() -> None:
+            """First options for the player."""
             global points
             print(f"What would you like to do next {player}?")
             starting_options: str = input("input 1 to start quiz, 2 to learn about the creator, 3 to skip the first question, or 4 to quit ")
@@ -38,10 +41,9 @@ if __name__ == "__main__":
                 points = points + wrong_choice(points)
                 print(f"You now have {str(points)} quizpoints ...you would be doing a lot better if you didn't skip the first question")
                 print("Onto the next part!")
-
             if starting_options == str(2):
                 print("The creator is named Alec Mulvaney. He's a sophmore at UNC, taking COMP110 with Kris Jordan!")
-                print("This is his ""Choose Your Own Adventure Project""!")
+                print("This is his Choose Your Own Adventure Project!")
                 next_step()
             if starting_options == str(1):
                 print("Excellent choice!")
@@ -49,6 +51,7 @@ if __name__ == "__main__":
                 question_one()
 
         def question_one() -> None:
+            """First real question that affects end element"""
             print(f"So {player} what type of bender do you think you'll be?")
             print("(your options are 1 for fire, 2 for water, 3 for air, and 4 for earth)")
             initial_pick: int = int(input())
@@ -69,6 +72,7 @@ if __name__ == "__main__":
             print("interesting choice... we'll see if it holds true")
 
         def wrong_choice(points: int) -> int:
+            """If the player picked to skip first question."""
             points = points - 1
             mistake: int = int(input("On a scale of 1-10, how much do you regret skipping the first question? "))
             if mistake <= 5:
@@ -80,6 +84,7 @@ if __name__ == "__main__":
             return points  
 
         def while_loop() -> None:
+            """Bulk of the game, picking which option to figure out element."""
             global points 
             global fire_points
             global water_points 
@@ -168,7 +173,8 @@ if __name__ == "__main__":
                         if choice_six == 4:
                             fire_points = fire_points + 1
 
-        def endgame() -> None:      
+        def endgame() -> None:
+            """Final step in the game assuming they haven't quit."""      
             global points 
             global fire_points
             global water_points 
