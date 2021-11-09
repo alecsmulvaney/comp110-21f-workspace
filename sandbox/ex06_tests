@@ -1,0 +1,25 @@
+    color_count = {}
+    for key, value in x.items():
+        if value not in color_count:
+            color_count[value] = 1
+        else:
+            color_count[value] += 1
+    return max(color_count, key=color_count.get)
+
+for the favorite colors function this or import mode from statistics
+
+    for key in x:
+        color_count[x[key]] = 0
+    for key in x:
+        if x[key] in color_count:
+            color_count[x[key]] += 1
+    counter: int = 0
+    color: str = ""
+    for key in color_count:
+        if counter < color_count[key]:
+            counter = color_count[key]
+    for key in color_count:
+        if color_count[key] == counter:
+            color = key
+            return color
+    return ""

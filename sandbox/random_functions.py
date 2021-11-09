@@ -14,3 +14,9 @@ print("A random_float: " + str(random_float))
 # the second argument.
 random_int: int = randint(0, 100)
 print("A random int: " + str(random_int))
+
+
+
+a: dict[int, int] = {0: 6}
+b: dict[int, int] = {0: 7}
+print(a[0] + b[0])
